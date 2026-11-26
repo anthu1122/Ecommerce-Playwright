@@ -1,0 +1,41 @@
+{
+  "standardUser": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "invalidLogins": [
+    {
+      "id": "TC_LOGIN_02",
+      "name": "wrong password shows error",
+      "username": "standard_user",
+      "password": "wrong_password",
+      "error": "Username and password do not match any user in this service"
+    },
+    {
+      "id": "TC_LOGIN_03",
+      "name": "empty username shows error",
+      "username": "",
+      "password": "secret_sauce",
+      "error": "Username is required"
+    },
+    {
+      "id": "TC_LOGIN_04",
+      "name": "empty password shows error",
+      "username": "standard_user",
+      "password": "",
+      "error": "Password is required"
+    },
+    {
+      "id": "TC_LOGIN_05",
+      "name": "locked out user shows error",
+      "username": "locked_out_user",
+      "password": "secret_sauce",
+      "error": "Sorry, this user has been locked out."
+    }
+  ],
+  "checkoutMissingFields": [
+    { "id": "TC_CHK_03", "first": "", "last": "Nguyen", "zip": "70000", "error": "First Name is required" },
+    { "id": "TC_CHK_04", "first": "An", "last": "", "zip": "70000", "error": "Last Name is required" },
+    { "id": "TC_CHK_05", "first": "An", "last": "Nguyen", "zip": "", "error": "Postal Code is required" }
+  ]
+}
